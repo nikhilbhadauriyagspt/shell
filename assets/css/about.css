@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #000;
+    font-family:"Poppins", sans-serif;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  
+  :root {
+    --blue:#00b500;
+    --main-head: "Roboto Condensed", sans-serif;;
+    --main-line: "Jost", sans-serif;;
+   
+ 
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-family: var(--main-line);
+  }
+p{
+    font-family: var(--main-head);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--top);
+}
+
+.about-side-inner{
+    position: absolute;
+    top: 34%;
+    left: 10%;
+}
+.about-side-inner1{
+    position: absolute;
+    top: 34%;
+    width: 50%;
+    right: 5%;
+}
+.about-inner{
+    position: relative;
+}
+
+.index-nav {
+    background: #000000bf !important;
+    padding: 18px 0px;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    right: 0;
+}
+
+.about-side-inner1 a{
+    border: 1px solid var(--blue);
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.about-side-inner1 p{
+    color: #b9b9b9;
+    margin-bottom: 20px;
+}
+.about-side-inner1 h3{
+    font-size: 60px ;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    color: #fff;
+    font-family: var(--main-head);
+}
+.about-side-inner1 h6{
+    font-size:40px ;
+    color: #969696;
+
+}
+.about-side-inner h3{
+    font-size: 60px ;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    color: #fff;
+    font-family: var(--main-head);
+}
+.about-side-inner h6{
+    font-size:40px ;
+    color: #969696;
+
+}
+.story-box h3{
+    font-size: 40px;
+    font-family: var(--main-head);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.story-box h3 span{
+    color: var(--blue);
+    position: relative;
+}
+.story-box p{
+    color: #c9c9c9;
+}
+
+.story-box h3 span::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, green 50%, white 50%);
+    bottom: -7px;
+    left: -43px;
+    width: 108px;
+    height: 5px;
+}
+.our-out .story-box h3 span::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, green 50%, white 50%);
+    bottom: -7px;
+    left: 8%;
+    width: 222px;
+    height: 5px;
+}
+.Enhance .story-box h3 span::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, green 50%, white 50%);
+    bottom: -7px;
+    left: 8%;
+    width: 222px;
+    height: 5px;
+}
+
+.our-story{
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+}
+.our-out{
+    background: linear-gradient(to bottom , #0000009f ,#00000086) ,url(../images/banner/wnat-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+}
+.our-story::after{
+    bottom: -56%;
+    right: -11%;
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #222222;
+}
+.our-story::before {
+    top: -53%;
+    left: -13%;
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #222222;
+}
+
+
+.perform .points-box {
+    min-height: 421px;
+}
+.perform .point-text p {
+    font-size: 15px;
+    color: #ededed;
+}
+.perform .point-text h5 {
+    color: #00b500;
+    font-size: 23px;
+    font-family: var(--main-line);
+    font-weight: 600;
+    margin: 10px 0 2px;
+}
+
+.lest-text h4{
+    color: #ffffff;
+    font-size: 40px;
+    font-family: var(--main-line);
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+.lest-text h4 span{
+    color: var(--blue);
+    position: relative;
+}
+.lest-text h4::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, green 50%, white 50%);
+    bottom: -7px;
+    left: 0;
+    width:230px;
+    height: 5px;
+
+}
+.lest-text{
+    padding-top: 50px;
+}
+.lest-text ul li{
+
+    position: relative;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.lest-text ul li a{
+    font-size: 14px;
+}
+.lest-text ul li a i{
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 30px;
+    background: var(--blue);
+    text-align: center;
+}
+
+   /* Make the dropdown open on hover */
+   .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: slideInFromBottom 0.3s ease-in-out; /* Animation to slide from bottom */
+    opacity: 1;
+    top: 17px;
+}
+
+/* Optional: add a transition effect for smooth dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: #11111180;
+    top: 100%; /* Position the menu below the item */
+    left: 0;
+    z-index: 1000;
+    border: 1px solid #dddddd63;
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start below the trigger */
+}
+.dropdown-item:active {
+    color:#fff;
+    text-decoration: none;
+    background-color:#000000;
+}
+.dropdown-item {
+    color: #fff;
+    
+}
+.dropdown-menu li{
+    border-bottom:  1px solid #dddddd52;
+}
+/* Animation for sliding in from bottom */
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(50px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(20px); /* Slide to the normal position */
+    }
+}

@@ -1,0 +1,559 @@
+
+.about-graphine{
+    padding: 50px 0;
+}
+.about-graphine h3{
+    margin-top: 3px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-line);
+    font-size: 40px;
+    text-align: center;
+}
+.about-graphine p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+.benefits-heading h3{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-line);
+    font-size: 40px;
+    text-align: center;
+}
+/* FAQ Section Styling */
+.faq-section {
+    width: 80%;
+    margin: 0 auto;
+    font-family: var(--main-line);
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#000;
+  }
+  .faq-section h2{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-line);
+    font-size: 40px;
+    text-align: center;
+  }
+  .faq-item {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-question h3 {
+    font-size: 18px;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  .toggle-btn {
+    background-color: #00B500;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Open State */
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+  
+  .faq-item.open .toggle-btn {
+    transform: rotate(45deg);
+  }
+ 
+  .cre-abt p{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--main-line);
+    
+  }
+  .card{
+    background-color: #000;
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: 100%;
+  }
+  .card-title{
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .card-text{
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+  .card-img-top{
+     height: 90px;
+     width:90px;
+     border-radius: 50%;
+     border: 1px solid #00b500;
+     padding: 20px;
+     margin-top: 10px;
+     margin-left: 10px;
+  }
+  .second{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  /* Card Styles */
+.card {
+    background-color: #000;
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: 100%;
+  }
+  
+  /* Card Title */
+  .card-title {
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  /* Card Text */
+  .card-text {
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  /* Image Style */
+  .card-img-top {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid #00b500;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  /* Second Section Styling */
+  .second {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .faq-section {
+    width: 80%;
+    margin: 0 auto;
+    font-family: var(--main-line);
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#000;
+  }
+  .faq-section h2{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-line);
+    font-size: 25px;
+    text-align: center;
+  }
+  .faq-item {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-question h3 {
+    font-size: 18px;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  .toggle-btn {
+    background-color: #00B500;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Open State */
+  .faq-item.open .faq-answer p {
+    display: block;
+    color: #000;
+    font-size: 13px;
+  }
+  
+  .faq-item.open .toggle-btn {
+    transform: rotate(90deg);
+  }
+  .cre-abt p{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--main-line);
+    
+  }
+  .card{
+    background-color: #000;
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: 100%;
+  }
+  .card-title{
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .card-text{
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+  .card-img-top{
+     height: 90px;
+     width:90px;
+     border-radius: 50%;
+     border: 1px solid #00b500;
+     padding: 20px;
+     margin-top: 10px;
+     margin-left: 10px;
+  }
+  .second{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  /* Card Styles */
+.card {
+    background-color: #000;
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    height: 100%;
+  }
+  
+  /* Card Title */
+  .card-title {
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  /* Card Text */
+  .card-text {
+    color: #fff;
+    font-family: var(--main-line);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  /* Image Style */
+  .card-img-top {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #00b500;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  /* Second Section Styling */
+  .second {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .cre-abt p{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--main-line);
+    
+  }
+  @media (max-width: 767px) {
+  
+    .card {
+      margin-bottom: 15px;
+    }
+  
+    .card-img-top {
+      height: 60px;
+      width: 60px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .card-text {
+      font-size: 15px;
+    }
+  
+    /* Stacking cards vertically */
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    .windowfilm-benifits {
+        padding: 0s 0; 
+  }
+  .about-graphine{
+    padding: 20px 0;
+}
+.about-graphine h3{
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-family: var(--main-line);
+    font-size: 27px;
+    text-align: center;
+}
+.about-graphine p{
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  padding-top: 16px;
+}
+.about-graphine .grep-img{
+  margin-top: 50px;
+}
+.benefits-heading h3{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-line);
+    font-size: 29px;
+    text-align: center;
+}
+.Enhance{
+  padding: 0 0;
+}
+.Enhance h2{
+  font-size: 22px;
+  padding-top: 20px;
+}
+.section-title3 {
+  font-size: 23px;
+  line-height: 16px;
+  font-family:var(--main-line);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  z-index: 9;
+}
+.faq-section {
+  width: 80%;
+  margin: 0 auto;
+  font-family: var(--main-line);
+  padding: 20px;
+  border-radius: 10px;
+  background-color:#000;
+}
+.faq-section h2{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--main-line);
+  font-size: 25px;
+  text-align: center;
+}
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question h3 {
+  padding-right: 20px;
+  font-size: 13px;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.toggle-btn {
+    position: absolute;
+    background-color: #00B500;
+    color: #fff;
+    border: none;
+    right: -10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Open State */
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .toggle-btn {
+  transform: rotate(45deg);
+}
+.carinterior img{
+   height: 250px;
+   object-fit: cover;
+}
+.carinterior h3 {
+  font-size: 18px!important;
+  color: #ddd;
+  font-weight: 700;
+  font-family: var(--main-line);
+  text-transform: capitalize;
+  text-shadow: 1px 2px 4px gray;
+}
+.rtjiurh h5{
+  position: absolute;
+  font-size: 14px;
+  position: absolute;
+  margin-top: -10px;
+  right: 18%;
+}
+.form-title p {
+  color: #000000;
+}
+
+.topimg img {
+  height: 450px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-top: 20px;
+}
+.media.single-contact-info {
+  margin-left: 12% !important;
+}
+}
+/* FAQ Section Styling */
+
+.carinterior h3{
+  font-size:40px;
+  color: #ddd;
+  font-weight: 700;
+  font-family: var(--main-line);
+  text-transform: capitalize;
+  text-shadow: 1px 2px 4px gray;
+
+}
+.carinterior h3 span{
+  color: var(--blue);
+}
+.carinterior p{
+  font-size: 17px;
+  padding-left: 25%;
+  color: #ddd;
+  font-weight: 400;
+  font-family: var(--main-line);
+  text-align: end;
+
+}
+.carinterior {
+  background-color: #181818;
+  position: relative;
+}
+.mt-3 {
+  margin-top: 0px ;
+}
+ 
+  

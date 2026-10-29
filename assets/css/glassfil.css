@@ -1,0 +1,602 @@
+.glassfilm-abt{
+    background: linear-gradient(to top, #000000, #00000074, #0000005e), url(../images/cer/glassfil.png);
+    background-attachment: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.glassfilm-abt h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 40px;
+    font-family:Jost, sans-serif;
+    margin-left: 20%;
+}
+.glassfilm-abt p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 50px;
+    font-family:"Roboto Condensed", sans-serif;
+    margin-left: 20%;
+}
+.windowfilm{
+    background: url(../images/glassfilm/bannerimage.png);
+    background-attachment: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+.windowfilm h2{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 40px;
+    text-align: center;
+    font-family:Jost, sans-serif; 
+}
+.windowfilm p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 50px;
+    text-align: center;
+    font-family:"Roboto Condensed", sans-serif;
+}
+.windshield h3{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 40px;
+    text-align: center;
+    font-family:Jost, sans-serif; 
+}
+.windshield p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    font-family:"Roboto Condensed", sans-serif;
+    margin-left: 25px;
+}
+
+.windowfilm-abt{
+    background: url(../images/windowfilm/windowbanner.png);
+    background-attachment: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.windowfilm-abt h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    font-family:Jost, sans-serif; 
+}
+span{
+    color: #00b500;
+}
+.windowfilm-abt h5{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    font-family:Jost, sans-serif; 
+}
+.windowfilm-abt p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family:"Roboto Condensed", sans-serif;
+}
+.windowfilm-benifits{
+    padding: 50px 0;
+}
+.windowfilm-benifits-text h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-top: 30px;
+}
+.cardbenefit{
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 277px;
+}
+.cardbenefit-img-top{
+    height: 65px;
+    width: 65px;
+    margin-top: 10px;
+    margin-left: 118px;
+}
+.cardbenefit-body{
+    padding: 20px;
+}
+.cardbenefit-title{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-top: 5px;
+}
+.cardbenefit-text{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    font-family:"Roboto Condensed", sans-serif;
+    padding-top: 5px;
+}
+.keypoints{
+    padding: 40px 0;
+    background: url(../images/glassfilm/bgimg.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.keypoints h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-bottom: 30px;
+}
+.cardpoint{
+    background-color: #000;
+    border: 1px solid #00b500;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    min-height: 120px;
+}
+.card-bodypoint img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 170px;
+    margin-top: 10px;
+    border: 1px solid #00b500;
+}
+.card-bodypoint h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-top: 5px;
+}
+.partner{
+    padding: 50px 0;
+}
+.partner-details-3m{
+    padding: 20px 0;
+}
+.partner h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-bottom: 30px;
+}
+.partner-details-3m img{
+    height: 100px;
+    width: 100px;
+    margin-left: 20%;
+}
+.partner-details-3m p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-top: 5px;
+}
+.windowfilm-benifits .benifits {
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0;
+}
+.windowfilm-benifits .benifits img{
+   text-align: center;
+   width: 45%;
+}
+.carwindowfilm{
+    margin: 50px 0;
+}
+.carwindowfilm h2{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    font-family:Jost, sans-serif;
+    padding-bottom: 30px;
+}
+.carwindowfilm h4{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+    font-family:Jost, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.carwindowfilm h5 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    font-family: Jost, sans-serif;
+    padding-top: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+}
+.carwindowfilm p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    font-family: Jost, sans-serif;
+    padding-top: 28px;
+}
+.featuredetails li{
+    list-style: circle;
+    margin-left: 25px;
+}
+.features1{
+    padding-top: 8px;
+}
+.features1 li{
+    display: inline;
+}
+.features{
+    padding: 15px 0;
+}
+.features li{
+    display: inline;
+}
+.features li{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-family:Jost, sans-serif;
+    padding-top: 10px;
+}
+@media (max-width: 767px){
+    .windowfilm-benifits{
+        padding: 10px 0;
+    }
+    .windowfilm-benifits{
+        padding: 0 0;
+    }
+    .windowfilm-benifits-text h2{
+        color: #fff;
+        font-size:38px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 30px;
+    }
+    .keypoints{
+        padding: 30px 0;
+    }
+    .keypoints h1{
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-bottom: 30px;
+    }
+    .cardpoint{
+        background-color: #000;
+        border: 1px solid #00b500;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        height: 50%;
+    }
+    .card-bodypoint{
+        padding: 20px 20px;
+    }
+    .card-img-top {
+        height: 60px;
+        width: 64px;
+    }
+    .glassfilm-abt h1{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 700;
+        padding-top: 40px;
+        font-family:Jost, sans-serif;
+        margin-left: 0;
+    }
+    .glassfilm-abt p{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 50px;
+        font-family:"Roboto Condensed", sans-serif;
+        margin-left: 0;
+    }
+    .windowfilm h2{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 40px;
+        text-align: center;
+        font-family:Jost, sans-serif; 
+    }
+    .windowfilm p{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 25px;
+        text-align: center;
+        font-family:"Roboto Condensed", sans-serif;
+    }
+    .windowfilm{
+        background: url(../images/glassfilm/bannerimage.png);
+        background-attachment: inherit;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+    }
+    .windshield h3{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+        padding-top: 40px;
+        text-align: center;
+        font-family:Jost, sans-serif; 
+    }
+    .windshield p{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        font-family:"Roboto Condensed", sans-serif;
+        margin-left: 25px;
+    }
+    .windshieldimg{
+        padding-top: 30px;
+    }
+    .windowfilm-abt{
+        background: url(../images/windowfilm/windowbanner.png);
+        background-attachment: inherit;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    .windowfilm-abt h1{
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif; 
+    }
+    .windowfilm-abt p{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 30px;
+        font-family:"Roboto Condensed", sans-serif;
+    }
+    .windowfilm-benifits{
+        padding: 50px 0;
+    }
+    .windowfilm-benifits-text h2{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 30px;
+    }
+    .keypoints{
+        padding: 50px 0;
+    }
+    .keypoints h1{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-bottom: 30px;
+    }
+    .cardpoint{
+        background-color: #000;
+        border: 1px solid #00b500;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        height: 50%;
+    }
+    .card-bodypoint{
+        padding: 20px 20px;
+    }
+    
+
+    .windowfilm-abt{
+        background: url(../images/windowfilm/windowbanner.png);
+        background-attachment: inherit;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .windowfilm-abt h1{
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif; 
+    }
+    span{
+        color: #00b500;
+    }
+    .windowfilm-abt h5{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        font-family:Jost, sans-serif; 
+    }
+    .windowfilm-abt p{
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-family:"Roboto Condensed", sans-serif;
+    }
+    .windowfilm-benifits{
+        padding: 50px 0;
+    }
+    .windowfilm-benifits-text h2{
+        color: #fff;
+        font-size: 27px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 30px;
+    }
+    .cardbenefit{
+        border: 1px solid #00b500;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 277px;
+    }
+    .cardbenefit-img-top{
+        height: 65px;
+        width: 65px;
+        margin-top: 10px;
+        margin-left: 137px;
+    }
+    .cardbenefit-body{
+        padding: 20px;
+    }
+    .cardbenefit-title{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 5px;
+    }
+    .cardbenefit-text{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        font-family:"Roboto Condensed", sans-serif;
+        padding-top: 5px;
+    }
+    .keypoints{
+        padding: 0 0;
+    }
+    .keypoints h2{
+        color: #fff;
+        font-size: 27px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-bottom: 30px;
+    }
+    .cardpoint{
+        background-color: #000;
+        border: 1px solid #00b500;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        min-height: 120px;
+    }
+    .card-bodypoint img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin-left: 118px;
+        margin-top: 10px;
+        border: 1px solid #00b500;
+    }
+    .card-bodypoint h4{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 8px;
+    }
+    .partner{
+        padding: 0 0;
+    }
+    .partner-details-3m{
+        padding: 20px 0;
+    }
+    .partner h2{
+        color: #fff;
+        font-size: 27px;
+        font-weight: 700;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-bottom: 30px;
+    }
+    .partner-details-3m img{
+        height: 100px;
+        width: 100px;
+        margin-left: 35%;
+    }
+    .partner-details-3m p{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        font-family:Jost, sans-serif;
+        padding-top: 10px;
+    }
+}
+
+.qa h5{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    font-family:Jost, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #767373;
+}
+.answerdetails{
+    border-bottom:1px solid #767373;
+    padding-bottom: 5px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    display: none;
+}

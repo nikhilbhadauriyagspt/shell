@@ -1,0 +1,36 @@
+
+.thankumsg h1{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    font-family:Jost, sans-serif;
+}
+.thankumsg p{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family:"Roboto Condensed", sans-serif;
+}
+.thankudetails{
+    padding: 30px 0;
+}
+.thankudetails h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    font-family:Jost, sans-serif;
+    padding-top: 30px;
+}
+.thankudetails p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family:"Roboto Condensed", sans-serif;
+}
+.thanku img{
+    height: 350px;
+    width: 100%;
+    margin: 30px 0;
+}
