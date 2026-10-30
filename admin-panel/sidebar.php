@@ -4,12 +4,23 @@ $isGalleryPage = in_array($currentAdminPage, ['add-gallery.php', 'manage-gallery
 $isBlogPage = in_array($currentAdminPage, ['add-blog.php', 'manage-blog.php', 'edit_blog.php']);
 $isUpdatePage = in_array($currentAdminPage, ['add-update.php', 'manage-update.php', 'edit-update.php']);
 $isFaqPage = in_array($currentAdminPage, ['add-faq.php', 'manage_faqs.php', 'edit_faq.php']);
+$isSeoPage = in_array($currentAdminPage, ['add-seo.php', 'manage-seo.php', 'edit-seo.php']);
+
+if (file_exists(__DIR__ . '/site_settings_helper.php')) {
+    require_once __DIR__ . '/site_settings_helper.php';
+    $sidebar_settings = get_site_settings($conn ?? null);
+    $sidebar_logo = (!empty($sidebar_settings['logo']) && strpos($sidebar_settings['logo'], 'admin-panel/') === 0) 
+        ? substr($sidebar_settings['logo'], strlen('admin-panel/')) 
+        : '../' . ltrim($sidebar_settings['logo'] ?? 'assets/images/logo-web/logo.png', '/');
+} else {
+    $sidebar_logo = '../assets/images/logo-web/logo.png';
+}
 ?>
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <div class="sidebar-heading text-center">
             <a href="dashboard.php" class="text-decoration-none d-flex flex-column align-items-center gap-1">
-                <img class="toplogo" src="../assets/images/logo-web/logo.png" alt="Shell Logo">
+                <img class="toplogo" src="<?= htmlspecialchars($sidebar_logo) ?>" alt="Shell Logo">
                 <img class="bottomlogo" src="../assets/images/logo-web/heamid.png" alt="Shell Automotive">
             </a>
         </div>
@@ -20,6 +31,18 @@ $isFaqPage = in_array($currentAdminPage, ['add-faq.php', 'manage_faqs.php', 'edi
                 <i class="fas fa-chart-pie nav-icon"></i>
                 <span>Dashboard</span>
             </a>
+
+            <!-- SEO Dropdown -->
+            <div class="dropdown <?= $isSeoPage ? 'open' : '' ?>">
+                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" id="seoDropdown">
+                    <i class="fas fa-search-location nav-icon"></i>
+                    <span>SEO Management</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="seoDropdown">
+                    <li><a class="dropdown-item <?= $currentAdminPage === 'add-seo.php' ? 'active-sub' : '' ?>" href="add-seo.php"><i class="fas fa-plus-circle fa-xs"></i> Add Page SEO</a></li>
+                    <li><a class="dropdown-item <?= in_array($currentAdminPage, ['manage-seo.php', 'edit-seo.php']) ? 'active-sub' : '' ?>" href="manage-seo.php"><i class="fas fa-list-ul fa-xs"></i> Manage All SEO</a></li>
+                </ul>
+            </div>
 
             <!-- Gallery Dropdown -->
             <div class="dropdown <?= $isGalleryPage ? 'open' : '' ?>">
@@ -79,6 +102,13 @@ $isFaqPage = in_array($currentAdminPage, ['add-faq.php', 'manage_faqs.php', 'edi
             <a href="subscribed_emails.php" class="list-group-item list-group-item-action <?= $currentAdminPage === 'subscribed_emails.php' ? 'active-item' : '' ?>">
                 <i class="fas fa-users nav-icon"></i>
                 <span>Subscribed Emails</span>
+            </a>
+
+            <div class="sidebar-nav-label mt-2">Settings</div>
+
+            <a href="site-settings.php" class="list-group-item list-group-item-action <?= $currentAdminPage === 'site-settings.php' ? 'active-item' : '' ?>">
+                <i class="fas fa-sliders-h nav-icon"></i>
+                <span>Header & Site Settings</span>
             </a>
 
             <div class="sidebar-nav-label mt-2">Quick Links</div>

@@ -5,12 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Automotive Care Tips, Guides & Insights | Blog - Shellcarcare</title>
-
-<meta name="description" content="Explore expert tips, in-depth guides, and the latest updates on automotive detailing, ceramic coating, PPF, and vehicle care from Shellcarcare. Stay informed and keep your vehicle in top condition.">
-
-<meta name="keywords" content="Car Care Blog, Bike Detailing Tips, Ceramic Coating Guide, PPF Information, Vehicle Protection Tips, Automotive News, Shellcarcare Blog, Auto Detailing Insights, Car Maintenance Tips, Vehicle Shine Tips">
-    <?php include 'header.php' ?>
+   <?php include 'header.php' ?>
     <style>
         .rtjiurh {
     position: absolute !important;

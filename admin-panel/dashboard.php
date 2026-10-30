@@ -18,7 +18,6 @@ $new_subscrib = $conn->query("SELECT COUNT(*) AS total FROM subscribed_emails WH
 
 // Fetch recent 5 contact inquiries for quick overview
 $recent_inquiries = $conn->query("SELECT * FROM contact_inquiries ORDER BY id DESC LIMIT 5");
-$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -279,3 +278,5 @@ $conn->close();
 </script>
 </body>
 </html>
+
+<?php if (isset($conn) && $conn instanceof mysqli) @$conn->close(); ?>

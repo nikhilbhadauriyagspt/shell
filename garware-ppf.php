@@ -5,11 +5,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garware PPF in Noida | Detailed Guide on Garware Paint Protection Film - Shell Car Care</title>
-
-    <meta name="description" content="Explore Garware PPF in Noida with Shell Car Care. Learn about Garware Paint Protection Film, its benefits, warranty, self-healing properties, paint protection, and available PPF options.">
-
-    <meta name="keywords" content="Garware PPF Noida, Garware Paint Protection Film, PPF in Noida, Paint Protection Film Noida, Garware Premium PPF, Garware Plus PPF, Car Paint Protection, Self Healing PPF, PPF Installation Noida, Shell Car Care">
     <?php include 'header.php' ?>
     <style>
         .team .item .team-img img {

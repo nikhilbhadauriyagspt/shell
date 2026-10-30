@@ -47,7 +47,6 @@ foreach ($categories as $category) {
 $all_result = $conn->query("SELECT * FROM gallery ORDER BY uploaded_at DESC");
 $all_images = $all_result->fetch_all(MYSQLI_ASSOC);
 
-$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -222,3 +221,5 @@ $conn->close();
 </script>
 </body>
 </html>
+
+<?php if (isset($conn) && $conn instanceof mysqli) @$conn->close(); ?>

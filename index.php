@@ -5,16 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Shell Automotiv - Premium Car & Motorcycle Detailing, Ceramic Coating, and Paint Protection Services</title>
-
-<meta name="description" content="At Shell Automotiv, we are committed to delivering top-tier vehicle care with a focus on quality and customer satisfaction. Our expert services include Car and Bike Detailing, Ceramic Coating, Graphene Coating, and PPF Paint Protection Film, using advanced techniques and premium materials for the best results. 
-
-Our skilled professionals specialize in Window Films, Denting & Painting, Interior Customization, Car Servicing, and Bike PPF, offering competitive pricing without compromising on quality. Whether you're looking for long-lasting protection or a flawless finish, we ensure your vehicle receives the best treatment.
-
-Experience excellence in automotiv care at Shell Automotiv—where your vehicle's shine and protection are our priority!" />
-
-<meta name="keywords" content="Shell Automotiv, Ceramic Coating, Detailing Services, Graphene Coating, Window Film, Bike Detailing, Car Denting and Painting, Car Washing Services, Paint Protection Film, Car Ceramic Coating, Car Detailing, Motorcycle Detailing, Best Car Denting and Painting, Car Washing, Car Denting Services, PPF Car Coating, PPF Coating, Teflon Coating, Car Nano Coating" />
-    <?php include 'header.php' ?>
+ <?php include 'header.php' ?>
     <style>
    .hidden {
         display: none;  /* Hidden content by default */

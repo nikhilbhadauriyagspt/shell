@@ -1,6 +1,13 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
 
+// Load dynamic site settings
+require_once __DIR__ . '/admin-panel/site_settings_helper.php';
+$site_settings = get_site_settings($conn ?? null);
+
+// Load dynamic SEO helper
+require_once __DIR__ . '/admin-panel/seo_helper.php';
+
 $bootstrap53Pages = ['index.php', 'about.php', 'services.php'];
 $noGraphinePages  = ['index.php', 'about.php', 'services.php', 'ceramic-coating.php', 'ppfcoating.php'];
 $glassfilPages    = [
@@ -16,10 +23,16 @@ $servicePages = [
     'car-interior.php', 'hydrodip.php', 'wrapping.php', 'car-service.php'
 ];
 $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'update-detail.php', 'faq.php'];
+
+$clean_phone = preg_replace('/[^0-9+]/', '', $site_settings['phone'] ?? '+919560595146');
+$clean_wa = preg_replace('/[^0-9]/', '', $site_settings['whatsapp'] ?? '919560595146');
 ?>
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo-web/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo-web/logo.png">
+    <!-- Dynamic SEO Meta Tags (Title, Description, Keywords from Admin) -->
+<?php render_seo_tags($currentPage, $conn ?? null); ?>
+
+    <!-- Dynamic Favicon -->
+    <link rel="icon" href="<?= htmlspecialchars($site_settings['favicon']) ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= htmlspecialchars($site_settings['favicon']) ?>">
 
     <!-- Bootstrap CSS -->
 <?php if (in_array($currentPage, $bootstrap53Pages)): ?>
@@ -72,7 +85,7 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
 
       gtag('config', 'AW-11492577036');
       gtag('config', 'AW-11492577036/zqpDCJqS5O0aEIyei-gq', {
-        'phone_conversion_number': '+91 9560595146'
+        'phone_conversion_number': '<?= htmlspecialchars($clean_phone) ?>'
       });
     </script>
 
@@ -87,13 +100,16 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
 
 <body<?= ($currentPage === 'garware-ppf.php') ? ' class="garware-ppf-page"' : '' ?>>
 
+<!-- Dynamic Floating WhatsApp Button -->
 <div class="contact-box">
-  <a href="https://wa.me/+919560595146" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/<?= htmlspecialchars($clean_wa) ?>" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 </div>
+
+<!-- Dynamic Floating Call Button -->
 <div class="call comon_icon">
-  <a href="tel:+919560595146" target="_blank">
+  <a href="tel:<?= htmlspecialchars($clean_phone) ?>" target="_blank" title="Call Us">
     <img src="assets/img/telephone.png" alt="Call Us">
   </a>
 </div>
@@ -104,43 +120,57 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
       <div class="col-lg-6 col-sm-6 col-xs-12">
         <div class="social-cre">
           <ul class="wrapper" style="list-style: none; padding: 0; display: inline-flex; gap: 15px; justify-content: center;">
+            <?php if (!empty($site_settings['facebook'])): ?>
             <li>
-              <a class="icon" href="https://www.facebook.com/profile.php?id=61568488280752" target="_blank">
+              <a class="icon" href="<?= htmlspecialchars($site_settings['facebook']) ?>" target="_blank">
                 <div class="tooltip">Facebook</div>
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
             </li>
+            <?php endif; ?>
+
+            <?php if (!empty($site_settings['twitter'])): ?>
             <li>
-              <a class="icon" href="https://www.twitter.com/shellautomotiv" target="_blank">
+              <a class="icon" href="<?= htmlspecialchars($site_settings['twitter']) ?>" target="_blank">
                 <div class="tooltip">Twitter</div>
                 <img src="assets/images/ui/twitwr.png" alt="twitter">
               </a>
             </li>
+            <?php endif; ?>
+
+            <?php if (!empty($site_settings['instagram'])): ?>
             <li>
-              <a class="icon" href="https://www.instagram.com/shell.automotiv" target="_blank">
+              <a class="icon" href="<?= htmlspecialchars($site_settings['instagram']) ?>" target="_blank">
                 <div class="tooltip">Instagram</div>
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
+            <?php endif; ?>
+
+            <?php if (!empty($site_settings['linkedin'])): ?>
             <li>
-              <a class="icon" href="http://www.linkedin.com/in/shellautomotiv" target="_blank">
+              <a class="icon" href="<?= htmlspecialchars($site_settings['linkedin']) ?>" target="_blank">
                 <div class="tooltip">Linkedin</div>
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
+            <?php endif; ?>
+
+            <?php if (!empty($site_settings['youtube'])): ?>
             <li>
-              <a class="icon" href="https://www.youtube.com/@ShellAutomotiv" target="_blank">
+              <a class="icon" href="<?= htmlspecialchars($site_settings['youtube']) ?>" target="_blank">
                 <div class="tooltip">YouTube</div>
                 <i class="fab fa-youtube"></i>
               </a>
             </li>
+            <?php endif; ?>
           </ul>
         </div>
       </div>
       <div class="col-lg-6 col-sm-6 col-xs-12">
         <div class="index-topcontent">
           <div class="top-btn d-flex justify-content-end">
-            <a href="https://wa.me/+919560595146">
+            <a href="https://wa.me/<?= htmlspecialchars($clean_wa) ?>" target="_blank">
               <i class="fa-solid fa-headset"></i>
               LET'S TALK
             </a>
@@ -151,9 +181,12 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
   </div>
 </section>
 
+<!-- Desktop Navigation Bar -->
 <nav class="navbar des-nav index-nav navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand mobile-logo" href="index.php"><img src="assets/images/logo-web/logo.png" width="100%" alt="Shell Automotiv"></a>
+    <a class="navbar-brand mobile-logo" href="index.php">
+      <img src="<?= htmlspecialchars($site_settings['logo']) ?>" width="100%" alt="<?= htmlspecialchars($site_settings['site_title'] ?? 'Shell Automotiv') ?>">
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
       aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,7 +222,12 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
           </ul>
         </li>
       </ul>
-      <a class="navbar-brand desktop-logo" href="index.php"><img src="assets/images/logo-web/logo.png" width="100%" alt="Shell Automotiv"></a>
+
+      <!-- Desktop Center Logo -->
+      <a class="navbar-brand desktop-logo" href="index.php">
+        <img src="<?= htmlspecialchars($site_settings['logo']) ?>" width="100%" alt="<?= htmlspecialchars($site_settings['site_title'] ?? 'Shell Automotiv') ?>">
+      </a>
+
       <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
           <a class="nav-link <?= ($currentPage === 'ppfcoating.php') ? 'active' : '' ?>" href="ppfcoating.php">Paint Protection Film</a>
@@ -215,9 +253,12 @@ $morePages = ['gallery.php', 'blogs.php', 'blog-details.php', 'updates.php', 'up
   </div>
 </nav>
 
+<!-- Mobile Navigation Bar -->
 <nav class="navbar mob-nav index-nav navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand mobile-logo" href="index.php"><img src="assets/images/logo-web/logo.png" width="100%" alt="Shell Automotiv"></a>
+    <a class="navbar-brand mobile-logo" href="index.php">
+      <img src="<?= htmlspecialchars($site_settings['logo']) ?>" width="100%" alt="<?= htmlspecialchars($site_settings['site_title'] ?? 'Shell Automotiv') ?>">
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScrollMobile"
       aria-controls="navbarScrollMobile" aria-expanded="false" aria-label="Toggle navigation">

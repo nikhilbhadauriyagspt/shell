@@ -5,14 +5,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceramic Coating Services | Vehicle Protection - Shell Automotive</title>
-<meta name="description" content="Looking for expert ceramic coating services in Noida? We offer premium Ceramic Coating, Graphene Coating, and Paint Protection Film (PPF) to enhance your car or bike’s shine and durability. Our advanced detailing solutions protect against scratches, UV rays, and environmental damage.  
-
-With professional services like Window Films, Denting & Painting, Interior Customization, and Bike PPF, we ensure top-quality results at competitive prices. Whether you need long-lasting protection or a showroom finish, trust us for the best vehicle care in Noida.  
-
-Visit us today for expert ceramic coating and detailing services!" />
-
-<meta name="keywords" content="Ceramic Coating Services, Car Ceramic Coating Noida, Bike Detailing, Paint Protection Film, Car Denting and Painting, Graphene Coating, Car Washing Services, Car Nano Coating, Teflon Coating, Premium Vehicle Coating" />
     <?php include 'header.php' ?>
 
 

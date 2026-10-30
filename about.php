@@ -5,12 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Shell Automotiv | Premium Vehicle Detailing & Protection Experts</title>
-
-<meta name="description" content="Learn more about Shell Automotiv, your trusted partner in premium car and bike care. With a passion for excellence, we specialize in high-end detailing, ceramic coating, PPF paint protection, and vehicle customization. Our experienced team is dedicated to quality, innovation, and customer satisfaction—delivering outstanding results for every ride." />
-
-<meta name="keywords" content="About Shell Automotiv, Premium Vehicle Care, Automotive Experts, Car and Bike Detailing, Ceramic Coating, Paint Protection Film, Vehicle Customization, Auto Detailing Professionals, Graphene Coating, Interior Customization, Car Denting and Painting, Shell Automotiv Team, Car Servicing, Bike PPF, Car Care Experts" />
-    <?php include 'header.php' ?>
+<?php include 'header.php' ?>
 
 
     <section class="about-inner">

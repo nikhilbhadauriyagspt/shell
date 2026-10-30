@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceramic Coating Services | Vehicle Protection - Shell Automotiv</title>
-    <meta name="description" content="Protect your vehicle with Shell Automotiv's ceramic coating. Enjoy a glossy finish, scratch resistance, and long-lasting shine. Book now!">
-    <meta name="keywords" content="Ceramic Coating, Vehicle Protection, Glossy Finish, Scratch Resistance, Long-Lasting Durability">
     <?php include 'header.php' ?>
 
 

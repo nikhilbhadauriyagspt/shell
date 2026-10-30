@@ -5,8 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>services : Shell Automotiv: Expert Detailing Services to Clean, Polish, and Restore Your Vehicle"</title>
-    <?php include 'header.php' ?>
+   <?php include 'header.php' ?>
 
 
     <section class="about-inner" style="border-bottom:  1px solid #464646bb;">

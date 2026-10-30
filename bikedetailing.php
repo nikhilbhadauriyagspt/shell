@@ -4,12 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bike Detailing Services | Premium Motorcycle Care & Protection - Shell Automotiv</title>
-
-<meta name="description" content="Give your bike the care it deserves with Shell Automotiv's expert bike detailing services. From deep cleaning to ceramic coating and PPF, we ensure a showroom shine, long-lasting protection, and premium finish for every ride. Book your service today!">
-
-<meta name="keywords" content="Bike Detailing, Motorcycle Detailing, Bike Ceramic Coating, Motorcycle Protection, Bike PPF, Two-Wheeler Detailing, Glossy Bike Finish, Shell Automotiv Bike Services, Premium Bike Care, Bike Scratch Protection, Motorcycle Shine, Bike Cleaning Service">
-    <?php include 'header.php' ?>
+  <?php include 'header.php' ?>
     <style>
 
 .accordion-button {

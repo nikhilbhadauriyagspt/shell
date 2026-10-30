@@ -5,9 +5,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Glassfilm Service in Noida - Shellcarcare</title>
-    <meta name="description" content="Protect your vehicle with Shell Automotive's ceramic coating. Enjoy a glossy finish, scratch resistance, and long-lasting shine. Book now!">
-    <meta name="keywords" content="Ceramic Coating, Vehicle Protection, Glossy Finish, Scratch Resistance, Long-Lasting Durability">
     <?php include 'header.php' ?>
 
     <section class="carinterior" >
@@ -23,44 +20,40 @@
 <div class="container">    
     <div class="row">
         <div class="col-md-4">
-             <a href="https://maps.app.goo.gl/yo7YCBZcro7q34UT9" target="_blank" class="map-link">
+             <a href="<?= htmlspecialchars($site_settings['maps_link'] ?? 'https://maps.app.goo.gl/yo7YCBZcro7q34UT9') ?>" target="_blank" class="map-link">
           <div class="media single-contact-info">
             <div class="media-left thumb">
               <img src="assets/img/contact/address.png" width="100%" alt="img">
             </div>
             <div class="media-body details">
                 <h3>Our Location</h3>
-                <p>
- 
-    D-61 Sector 10 Noida
- 
-</p>
+                <p><?= nl2br(htmlspecialchars($site_settings['address'] ?? 'D-61 Sector 10 Noida')) ?></p>
             </div>
           </div>
            </a>
         </div>
         <div class="col-md-4">
-            <a href="tel:+919560595146">
+            <a href="tel:<?= preg_replace('/[^0-9+]/', '', $site_settings['phone'] ?? '+919560595146') ?>">
           <div class="media single-contact-info">
             <div class="media-left thumb">
                 <img src="assets/img/contact/contactus.png" width="100%" alt="img">
             </div>
             <div class="media-body details">
                 <h3>Contact Us</h3>
-                  <p>+91 9560595146</p>
+                  <p><?= htmlspecialchars($site_settings['phone'] ?? '+91 9560595146') ?></p>
             </div>
           </div>
           </a>
         </div>
         <div class="col-md-4">
-            <a href="mailto:shellautomotiv@gmail.com">
+            <a href="mailto:<?= htmlspecialchars($site_settings['email'] ?? 'shellautomotiv@gmail.com') ?>">
           <div class="media single-contact-info">
             <div class="media-left thumb">
                 <img src="assets/img/contact/email.png" width="100%" alt="img">
             </div>
             <div class="media-body details">
                 <h3>Email</h3>
-                 <p>shellautomotiv@gmail.com</a></p>
+                 <p><?= htmlspecialchars($site_settings['email'] ?? 'shellautomotiv@gmail.com') ?></p>
             </div>
           </div>
           </a>

@@ -48,6 +48,12 @@
     </div>
   </section>
 
+<?php
+if (!isset($site_settings)) {
+    require_once __DIR__ . '/admin-panel/site_settings_helper.php';
+    $site_settings = get_site_settings($conn ?? null);
+}
+?>
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -56,21 +62,21 @@
           <img src="assets/images/logo-web/creatine-logo.png" width="100%" alt="">
           <p>Experience top-tier detailing with Shell Automotiv—cleaning, polishing, and restoring your vehicle to perfection.</p>
           <div class="soci-icon">
-            <!-- Facebook -->
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-
-            <!-- Twitter -->
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-            <!-- YouTube -->
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-
+            <?php if (!empty($site_settings['facebook'])): ?>
+            <a href="<?= htmlspecialchars($site_settings['facebook']) ?>" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($site_settings['twitter'])): ?>
+            <a href="<?= htmlspecialchars($site_settings['twitter']) ?>" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($site_settings['instagram'])): ?>
+            <a href="<?= htmlspecialchars($site_settings['instagram']) ?>" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($site_settings['linkedin'])): ?>
+            <a href="<?= htmlspecialchars($site_settings['linkedin']) ?>" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <?php endif; ?>
+            <?php if (!empty($site_settings['youtube'])): ?>
+            <a href="<?= htmlspecialchars($site_settings['youtube']) ?>" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
