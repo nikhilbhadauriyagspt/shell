@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$username = "u490430121_shellautomotiv";    
-$password = "Asdf@#%54321";         
-$dbname = "u490430121_shellautomotiv";
+$username = "root";    
+$password = "";         
+$dbname = "shell";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 

@@ -1,3 +1,0 @@
-<?php
-// Handle gallery uploads
-?>

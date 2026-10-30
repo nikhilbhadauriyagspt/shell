@@ -17,8 +17,26 @@
       
         <div class="col-md-5">
           <div class="news-form">
+          <?php
+          if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["subscribe_email"])) {
+              $sub_email = filter_var(trim($_POST["subscribe_email"]), FILTER_SANITIZE_EMAIL);
+              if (filter_var($sub_email, FILTER_VALIDATE_EMAIL)) {
+                  include "admin-panel/config.php";
+                  if (isset($conn) && !$conn->connect_error) {
+                      $stmt_sub = $conn->prepare("INSERT INTO subscribed_emails (email, status) VALUES (?, 'new')");
+                      if ($stmt_sub) {
+                          $stmt_sub->bind_param("s", $sub_email);
+                          $stmt_sub->execute();
+                          $stmt_sub->close();
+                      }
+                      $conn->close();
+                      echo "<script>alert('Thank you for subscribing!');</script>";
+                  }
+              }
+          }
+          ?>
           <form action="" method="POST">
-        <input type="email" name="email" placeholder="Enter Your Mail" required>
+        <input type="email" name="subscribe_email" placeholder="Enter Your Mail" required>
         <button type="submit">Submit Now</button>
         </form>
       
@@ -80,7 +98,7 @@
               <a href="gallery.php">Our Gallery</a>
             </li>
             <li>
-              <a href="conatct.php">Contact Us</a>
+              <a href="contact.php">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -407,64 +425,79 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 
 
-           <!-- First Form -->
-    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-  
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const errorMsg = document.getElementById('errorMsg');
-    const recaptcha = document.querySelector('.g-recaptcha');
+           <!-- Google reCAPTCHA & Universal Contact Form Handler -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('form[action="process.php"]');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Form submit rok do (no refresh)
-
-        // reCAPTCHA check client-side
-        const recaptchaResponse = grecaptcha.getResponse();
-        if (recaptchaResponse.length === 0) {
-            errorMsg.textContent = 'Please check the reCAPTCHA to submit the form!';
-            errorMsg.style.display = 'block';
-            recaptcha.scrollIntoView({ behavior: 'smooth' });
-            return;
+    forms.forEach(function(form) {
+        // Ensure an error message container exists inside each form
+        let errorBox = form.querySelector('.form-error-msg, #errorMsg');
+        if (!errorBox) {
+            errorBox = document.createElement('div');
+            errorBox.className = 'form-error-msg';
+            errorBox.style.cssText = 'color: #dc2626; font-weight: 500; display: none; margin: 10px 0;';
+            const submitBtn = form.querySelector('button[type="submit"], button');
+            if (submitBtn) {
+                submitBtn.parentNode.insertBefore(errorBox, submitBtn);
+            } else {
+                form.appendChild(errorBox);
+            }
         }
 
-        // Form data collect karo
-        const formData = new FormData(form);
-        errorMsg.style.display = 'none'; // Purana error hide karo
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            errorBox.style.display = 'none';
 
-        // AJAX request bhejo
-        fetch('process.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json()) // Server se JSON response expect karo
-        .then(data => {
-            if (data.error) {
-                // Server se error aaya (jaise reCAPTCHA fail ya email issue)
-                errorMsg.textContent = data.error;
-                errorMsg.style.display = 'block';
-                recaptcha.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                // Success case: Redirect to successfullysubmitted.php
-                window.location.href = 'successfullysubmitted.php';
+            const formData = new FormData(form);
+            const recaptchaToken = formData.get('g-recaptcha-response');
+
+            if (!recaptchaToken || recaptchaToken.trim().length === 0) {
+                errorBox.textContent = 'Please check the reCAPTCHA to submit the form!';
+                errorBox.style.display = 'block';
+                const recaptchaEl = form.querySelector('.g-recaptcha');
+                if (recaptchaEl) recaptchaEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
             }
-        })
-        .catch(error => {
-            // Network ya unexpected error
-            errorMsg.textContent = 'Something went wrong. Please try again!';
-            errorMsg.style.display = 'block';
-            console.error('Error:', error);
+
+            const submitBtn = form.querySelector('button[type="submit"], button');
+            const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending...';
+            }
+
+            fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                if (data.error) {
+                    errorBox.textContent = data.error;
+                    errorBox.style.display = 'block';
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }
+                } else {
+                    window.location.href = 'successfullysubmitted.php';
+                }
+            })
+            .catch(function(err) {
+                errorBox.textContent = 'Something went wrong. Please try again!';
+                errorBox.style.display = 'block';
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+                console.error('Form error:', err);
+            });
         });
     });
-
-    // Optional: reCAPTCHA check hone pe error hide karo
-    recaptcha.addEventListener('DOMSubtreeModified', function() {
-        if (grecaptcha.getResponse().length > 0) {
-            errorMsg.style.display = 'none';
-        }
-    });
 });
-  </script>
+</script>
 
 </body>
 

@@ -10,31 +10,7 @@
     <meta name="description" content="Explore Garware PPF in Noida with Shell Car Care. Learn about Garware Paint Protection Film, its benefits, warranty, self-healing properties, paint protection, and available PPF options.">
 
     <meta name="keywords" content="Garware PPF Noida, Garware Paint Protection Film, PPF in Noida, Paint Protection Film Noida, Garware Premium PPF, Garware Plus PPF, Car Paint Protection, Self Healing PPF, PPF Installation Noida, Shell Car Care">
-    <link rel="icon" href="assets/images/logo-web/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo-web/logo.png">
-    <!-- bootstrap cdn............................................. -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- font awesome cnd................................................. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
-    <!-- aos cdn ...........................................................-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom cs........................................................... -->
-    <link href="assets/css/style.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/Ceramic.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/index.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/about.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/graphine.css">
-    <link rel="stylesheet" href="assets/css/glassfil.css">
-    <!-- custom owl caruosel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <?php include 'header.php' ?>
     <style>
         .team .item .team-img img {
             -webkit-transition: all .5s;
@@ -195,100 +171,7 @@
         }
     </style>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11492577036"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-11492577036');
-    </script>
-
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MTC5V2D7');
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
-
-<body class="garware-ppf-page">
-
-
-
-
-    <script>
-        // Delay the loading by 4 seconds
-        window.onload = function() {
-            setTimeout(function() {
-                // Hide the loader
-                document.getElementById('loader').style.display = 'none';
-                // Show the content
-                document.getElementById('content').style.display = 'block';
-            }, 3000); // 4000 milliseconds = 4 seconds
-        };
-    </script>
-    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="quoteModalLabel">Get A Quote</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <form action="process.php" method="post" class="custom-form" id="contactForm">
-
-                        <div class="form-title">
-                            <p>FILL IN YOUR DETAILS FOR QUOTES</p>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-                        </div>
-
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-                        </div>
-                        <!-- reCAPTCHA widget -->
-                        <div class="g-recaptcha" data-sitekey="6Lfvis8rAAAAADH4uPrLG2kDN4uYX1WUmbwWLK5F"></div>
-
-                        <!-- Error message div -->
-                        <div id="errorMsg" style="color: red; display: none; margin-top: 10px;"></div>
-
-                        <div class="form-group">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <?php include 'header.php' ?>
 
 
     <section>
@@ -411,10 +294,7 @@
 
                 </div>
                 <div class="col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="2000">
-                    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
-
-
-                    <form action="homeprocess.php" method="post" class="contact-form" id="contactForm2">
+                    <form action="process.php" method="post" class="contact-form" id="contactForm2">
                         <p id="heading">Get A Quoute</p>
                         <div class="row">
                             <div class="col-md-6">
@@ -857,7 +737,7 @@
                 <div class="col-md-12">
                     <div class="contact-form-container">
                         <!-- Second Form (Direct Submission, No Client-Side reCAPTCHA) -->
-                        <form action="homeprocess.php" method="post" class="contact-form" id="contactForm2">
+                        <form action="process.php" method="post" class="contact-form" id="contactForm2">
                             <h2>Get In Touch</h2>
                             <label for="name2">Name</label>
                             <input type="text" id="name2" name="name" placeholder="Your Name" required class="input-field">
@@ -1086,6 +966,5 @@
         }
       };
     </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-</body>
+    </body>
 </html>

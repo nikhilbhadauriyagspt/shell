@@ -6,103 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shell Automotiv | Excellence in Automotive Care & Premium PPF Solutions</title>
-    <link rel="icon" href="assets/images/logo-web/logo.png">
-    <!-- bootstrap cdn............................................. -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-
-    <!-- aos cdn ...........................................................-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom cs........................................................... -->
-    <link href="assets/css/style.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/Ceramic.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/index.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/about.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/responsive.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11492577036"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-11492577036');
-    </script>
-
-
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MTC5V2D7');
-    </script>
-    <!-- End Google Tag Manager -->
-
+    <?php include 'header.php' ?>
     <style>
         #garwareppf {
             cursor: pointer;
         }
     </style>
-</head>
 
-<body>
-    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="quoteModalLabel">Get A Quote</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
 
-                    <!-- First Form -->
-                    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-                    <form action="process.php" method="post" class="custom-form" id="contactForm">
-                        <div class="form-title">
-                            <p>FILL IN YOUR DETAILS FOR QUOTES</p>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <div class="g-recaptcha" id="recaptcha1" data-sitekey="6Lfvis8rAAAAADH4uPrLG2kDN4uYX1WUmbwWLK5F"></div>
-                        <div id="errorMsg" style="color: red; display: none; margin-top: 10px;"></div>
-                        <div class="form-group">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php include 'header.php' ?>
 
     <section class="banner">
         <div class="video-fullscreen-video">
@@ -183,7 +94,7 @@
                     <!-- <img src="assets/images/about/side-abt.jpg" width="100%" alt="about-side"> -->
 
 
-                    <form action="homeprocess.php" method="post" class="custom-form" id="contactForm2">
+                    <form action="process.php" method="post" class="custom-form" id="contactForm2">
 
                         <div class="form-title">
                             <p>FILL IN YOUR DETAILS FOR QUOTES</p>
@@ -471,7 +382,7 @@
                 </div>
                 <div class="col-md-8 " style="z-index: 99; margin-top: 50px;">
 
-                    <form action="homeprocess.php" method="post" class="custom-form1" id="contactForm2">
+                    <form action="process.php" method="post" class="custom-form1" id="contactForm2">
                         <div class="form-title">
                             <p>FILL IN YOUR DETAILS FOR QUOTES</p>
                         </div>
@@ -497,9 +408,7 @@
                             </div>
                             <div class="g-recaptcha" id="recaptcha2" data-sitekey="6Lfvis8rAAAAADH4uPrLG2kDN4uYX1WUmbwWLK5F"></div>
 
-                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-                        </div>
+                            </div>
 
 
                         <div class="form-group text-center">
@@ -2116,16 +2025,6 @@
             </div>
         </div>
     </section>
-    <div class="contact-box">
-        <a href="https://wa.me/+919560595146" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-
-    </div>
-    <div class="call comon_icon">
-        <a href="tel:+919560595146" target="_blank">
-            <img src="assets/img/telephone.png"></a>
-    </div>
 
 
     <script>

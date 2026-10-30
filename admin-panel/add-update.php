@@ -5,256 +5,151 @@ if (!isset($_SESSION['admin_logged_in'])) {
     exit();
 }
 include('config.php');
-
-// Fetch existing data
-$result = $conn->query("SELECT * FROM updates ORDER BY created_at DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Management</title>
+    <title>Add Update - Admin Panel</title>
     <link rel="stylesheet" href="css/style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.tiny.cloud/1/mfgp8vxsf2ntfta1e8r4hhmrul7gbtko1j14j805pu9fedcc/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
-      <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Bootstrap 5 (optional but recommended for styling) -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Summernote CSS -->
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
-
-<!-- Summernote JS -->
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 
 <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <div class="sidebar-heading text-center">
-            
-        <img class="toplogo" src="../assets/images/logo-web/logo.png" width="100%" alt="">
-        <img  class="bottomlogo"src="../assets/images/logo-web/heamid.png" width="100%" alt="">
-        </div>
-        <div class="list-group list-group-flush">
-            <a href="dashboard.php" class="list-group-item list-group-item-action">Dashboard</a>
+    <?php include 'sidebar.php'; ?>
 
-            <!-- Gallery Dropdown -->
-            <div class="dropdown">
-                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" id="galleryDropdown">Gallery</a>
-                <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
-                    <li><a class="dropdown-item" href="add-gallery.php">Add Gallery</a></li>
-                    <li><a class="dropdown-item" href="manage-gallery.php">Manage Gallery</a></li>
-                </ul>
-            </div>
-
-             <!-- Gallery Dropdown -->
-             <div class="dropdown">
-                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" id="blogsDropdown">Blogs</a>
-                <ul class="dropdown-menu" aria-labelledby="blogsDropdown">
-                    <li><a class="dropdown-item" href="add-blog.php">Add Blog</a></li>
-                    <li><a class="dropdown-item" href="manage-blog.php">Manage Blogs</a></li>
-                </ul>
-            </div>
-             <!-- Gallery Dropdown -->
-             <div class="dropdown">
-                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" id="updatesDropdown">Updates</a>
-                <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
-                    <li><a class="dropdown-item" href="add-update.php">Add Update</a></li>
-                    <li><a class="dropdown-item" href="manage-update.php">Manage Updates</a></li>
-                </ul>
-            </div>
-          <!-- Faq Dropdown -->
-          <div class="dropdown">
-                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" id="faqDropdown">FAQ</a>
-                <ul class="dropdown-menu" aria-labelledby="faqDropdown">
-                    <li><a class="dropdown-item" href="add-faq.php">Add FAQ</a></li>
-                    <li><a class="dropdown-item" href="manage-faqs.php">Manage FAQ</a></li>
-                </ul>
-            </div>
-         
-            <a href="contact-entries.php" class="list-group-item list-group-item-action">Contact Entries</a>
-            <a href="subscribed_emails.php" class="list-group-item list-group-item-action">Subscribed Emails</a>
-        </div>
-    </div>
-
-    <!-- Page Content -->
     <div id="page-content-wrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            
-            <a href="logout.php" class="btn btn-danger logout-btn">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn" id="menu-toggle" title="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+                <span class="fw-semibold text-secondary d-none d-sm-inline">Updates Management</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-light text-dark border px-3 py-2 d-none d-md-inline-flex align-items-center gap-2">
+                    <i class="fas fa-user-shield text-danger"></i> <?= htmlspecialchars($_SESSION['admin_user'] ?? 'Admin') ?>
+                </span>
+                <a href="logout.php" class="btn logout-btn">Logout <i class="fas fa-sign-out-alt"></i></a>
+            </div>
         </nav>
 
-       
-<div class="container mt-5">
-    <h2 class="mb-4">Add Updates</h2>
+        <div class="container-fluid p-4">
+            <div class="admin-surface-card" style="max-width: 960px; margin: 0 auto;">
+                <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                    <div>
+                        <h2 class="mb-1">Post New Update</h2>
+                        <p class="text-muted mb-0" style="font-size: 13.5px;">Share latest news, offers, or work updates on the website</p>
+                    </div>
+                    <a href="manage-update.php" class="btn btn-outline-secondary btn-sm px-3 py-2 rounded-3">
+                        <i class="fas fa-arrow-left me-1"></i> Manage Updates
+                    </a>
+                </div>
 
-    <!-- Form -->
-    <form action="upload_update.php" method="POST" enctype="multipart/form-data" class="bg-light p-4 rounded shadow-sm">
-        <div class="mb-3">
-            <label for="title" class="form-label">Update Title</label>
-            <input type="text" class="form-control" id="title" name="title" required>
+                <form action="upload_update.php" method="POST" enctype="multipart/form-data">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-7">
+                            <label for="title" class="form-label">Update Title <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter update headline" required>
+                        </div>
+
+                        <div class="col-md-5">
+                            <label for="services" class="form-label">Service Category <span class="text-danger">*</span></label>
+                            <select class="form-select" id="services" name="services" required>
+                                <option disabled selected value="">-- Select Service --</option>
+                                <option value="ceramic_coating">Ceramic Coating</option>
+                                <option value="graphene_coating">Graphene Coating</option>
+                                <option value="glass_film">Glass Film</option>
+                                <option value="car_detailing">Car Detailing Services</option>
+                                <option value="bike_detailing">Bike Detailing Services</option>
+                                <option value="denting_painting">Denting and Painting</option>
+                                <option value="interior_customisation">Interior Customisation</option>
+                                <option value="hydrodip">Hydrodip</option>
+                                <option value="wrapping">Wrapping</option>
+                                <option value="car_service_repair">Car Service & Repair</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
+                        <textarea name="content" id="description" cols="30" rows="10" class="summernote" placeholder="Description"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Upload Images <span class="text-danger">*</span></label>
+                        <div class="upload-preview" style="height: 140px;" onclick="document.getElementById('images').click()">
+                            <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i>
+                            <span class="fw-semibold" style="font-size: 14px;">Click to select update images</span>
+                            <span class="text-muted small">Supports JPG, PNG, WEBP</span>
+                            <input type="file" class="d-none" id="images" name="images[]" multiple required>
+                        </div>
+                        <div id="updateImagePreview" class="preview-container d-flex flex-wrap mt-2"></div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 pt-3 border-top">
+                        <a href="manage-update.php" class="btn btn-light border px-4">Cancel</a>
+                        <button type="submit" class="btn btn-dark px-4"><i class="fas fa-paper-plane me-2"></i>Publish Update</button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="mb-3">
-            <label for="services" class="form-label">Select Service</label>
-            <select class="form-control" id="services" name="services" required>
-                <option disabled selected value="">-- Select Service --</option>
-                <option value="ceramic_coating">Ceramic Coating</option>
-                <option value="graphene_coating">Graphene Coating</option>
-                <option value="glass_film">Glass Film</option>
-                <option value="car_detailing">Car Detailing Services</option>
-                <option value="bike_detailing">Bike Detailing Services</option>
-                <option value="denting_painting">Denting and Painting</option>
-                <option value="interior_customisation">Interior Customisation</option>
-                <option value="hydrodip">Hydrodip</option>
-                <option value="wrapping">Wrapping</option>
-                <option value="car_service_repair">Car Service & Repair</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-         <label for="description">Description</label>
-        <textarea name="content" id="description" cols="30" rows="10" class="summernote" placeholder="Description"></textarea>
-        </div>
-
-        <div class="mb-3">
-            <label for="images" class="form-label">Upload Images</label>
-            <input type="file" class="form-control" id="images" name="images[]" multiple required>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Publish</button>
-    </form>
-
-    <hr class="my-5">
-
-    
-</div>
-
-
-</div>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    tinymce.init({
-        selector: '#blogContent',
-        height: 500,
-        plugins: 'advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
-        toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
-        content_css: 'css/content.css'
-    });
-
-    const blogImages = document.getElementById('blogImages');
-    const imagePreview = document.getElementById('imagePreview');
-
-    blogImages.addEventListener('change', () => {
-        imagePreview.innerHTML = '';
-        Array.from(blogImages.files).forEach(file => {
+    document.getElementById('images').addEventListener('change', function() {
+        const preview = document.getElementById('updateImagePreview');
+        preview.innerHTML = '';
+        Array.from(this.files).forEach(file => {
             const reader = new FileReader();
             reader.onload = (e) => {
                 const img = document.createElement('img');
                 img.src = e.target.result;
-                imagePreview.appendChild(img);
+                preview.appendChild(img);
             };
             reader.readAsDataURL(file);
         });
     });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
     const menuToggle = document.getElementById('menu-toggle');
-    const wrapper = document.getElementById('wrapper');
     const sidebar = document.getElementById('sidebar-wrapper');
     const content = document.getElementById('page-content-wrapper');
 
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('d-none');
-
-        const isMobile = window.innerWidth <= 768; // You can adjust the breakpoint if needed
-
+        const isMobile = window.innerWidth <= 768;
         if (sidebar.classList.contains('d-none')) {
             content.style.marginLeft = '0';
             content.style.width = '100%';
         } else {
-            if (isMobile) {
-                content.style.marginLeft = '150px';
-                content.style.width = 'calc(100% - 150px)';
-            } else {
-                content.style.marginLeft = '250px';
-                content.style.width = 'calc(100% - 250px)';
-            }
+            content.style.marginLeft = isMobile ? '0' : '260px';
+            content.style.width = isMobile ? '100%' : 'calc(100% - 260px)';
         }
     });
 
-    // Dropdown animation
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
-
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
-
-            if (dropdown.classList.contains('open')) {
-                dropdown.classList.remove('open');
-                dropdown.classList.add('close');
-            } else {
-                dropdown.classList.remove('close');
-                dropdown.classList.add('open');
-            }
+            dropdown.classList.toggle('open');
+            dropdown.classList.toggle('close', !dropdown.classList.contains('open'));
         });
     });
-</script>
 
-
-<script>
-    function triggerUpload(container) {
-        const input = container.querySelector('input');
-        input.click();
-    }
-
-    function previewImage(input) {
-        const container = input.closest('.upload-preview');
-        const preview = container.querySelector('img');
-        const uploadIcon = container.querySelector('i');
-        
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-                uploadIcon.style.display = 'none';
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-</script>
-
-<script>
     $(document).ready(function() {
         $('.summernote').summernote({
-            height: 300,
-           
+            height: 280,
+            placeholder: 'Write update description here...'
         });
     });
 </script>
-
 </body>
 </html>
-
-
-
 <?php $conn->close(); ?>

@@ -50,14 +50,26 @@ if (!isset($respData['success']) || $respData['success'] !== true) {
 }
 
 // 2️⃣ Sanitize form inputs
-$name = filter_var(trim($_POST['name'] ?? ''), FILTER_SANITIZE_STRING);
-$phone = filter_var(trim($_POST['phone'] ?? ''), FILTER_SANITIZE_STRING);
-$message = filter_var(trim($_POST['message'] ?? ''), FILTER_SANITIZE_STRING);
+$name = strip_tags(trim($_POST['name'] ?? ''));
+$phone = strip_tags(trim($_POST['phone'] ?? ''));
+$message = strip_tags(trim($_POST['message'] ?? ''));
 
 // Basic validation for required fields
 if (empty($name) || empty($phone) || empty($message)) {
     echo json_encode(['error' => 'Please fill all required fields!']);
     exit;
+}
+
+// Save inquiry to database
+include 'admin-panel/config.php';
+if (isset($conn) && !$conn->connect_error) {
+    $stmt = $conn->prepare("INSERT INTO contact_inquiries (name, phone, message, status) VALUES (?, ?, ?, 'new')");
+    if ($stmt) {
+        $stmt->bind_param("sss", $name, $phone, $message);
+        $stmt->execute();
+        $stmt->close();
+    }
+    $conn->close();
 }
 
 // 3️⃣ Prepare PHPMailer

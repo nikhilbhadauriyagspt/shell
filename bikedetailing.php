@@ -9,50 +9,8 @@
 <meta name="description" content="Give your bike the care it deserves with Shell Automotiv's expert bike detailing services. From deep cleaning to ceramic coating and PPF, we ensure a showroom shine, long-lasting protection, and premium finish for every ride. Book your service today!">
 
 <meta name="keywords" content="Bike Detailing, Motorcycle Detailing, Bike Ceramic Coating, Motorcycle Protection, Bike PPF, Two-Wheeler Detailing, Glossy Bike Finish, Shell Automotiv Bike Services, Premium Bike Care, Bike Scratch Protection, Motorcycle Shine, Bike Cleaning Service">
-
-    <link rel="icon" href="assets/images/logo-web/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo-web/logo.png">
-    <!-- bootstrap cdn............................................. -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- font awesome cnd................................................. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- aos cdn ...........................................................-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom cs........................................................... -->
-    <link href="assets/css/style.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/Ceramic.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/index.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/about.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/responsive.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/graphine.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-
-    <!-- custom owl caruosel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11492577036"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11492577036');
-</script>
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MTC5V2D7');</script>
-<!-- End Google Tag Manager -->
-   <style>
+    <?php include 'header.php' ?>
+    <style>
 
 .accordion-button {
     position: relative;
@@ -140,10 +98,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #ddd;
 }
    </style>
-</head>
-
-<body>
-
 
 <!-- Modal for Service Details -->
 <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
@@ -160,49 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </div>
 
-<!-- Existing Quote Form Modal -->
-<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="quoteModalLabel">Get A Quote</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                 <form action="process.php" method="post" class="custom-form" id="contactForm">
-          
-                    <div class="form-title">
-                        <p>FILL IN YOUR DETAILS FOR QUOTES</p>
-                    </div>
 
-                    <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required >
-
-                    </div>
-
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required >
-                    </div>
-
-                    <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Your Message" required ></textarea>
-
-                    </div>
-                    <!-- reCAPTCHA widget -->
-    <div class="g-recaptcha" data-sitekey="6Lfvis8rAAAAADH4uPrLG2kDN4uYX1WUmbwWLK5F"></div>
-
-    <!-- Error message div -->
-    <div id="errorMsg" style="color: red; display: none; margin-top: 10px;"></div>
-
-                    <div class="form-group">
-                        <button type="submit">Send</button>
-                    </div>
-                </form>  </div>
-        </div>
-    </div>
-</div>
-    <?php include 'header.php' ?>
 
     
 <section class="cardetailing" >
@@ -560,15 +472,5 @@ Unlike cars with large, flat panels, bikes have intricate parts that need specia
   </div>
 </section>
 
-    <div class="contact-box">
-        <a href="https://wa.me/+919560595146" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-
-    </div>
-    <div class="call comon_icon">
-        <a href="tel:+919560595146" target="_blank">
-            <img src="assets/img/telephone.png"></a>
-    </div>
 
     <?php include 'footer.php';?>

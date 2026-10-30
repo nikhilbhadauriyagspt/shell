@@ -10,71 +10,7 @@
 <meta name="description" content="Learn more about Shell Automotiv, your trusted partner in premium car and bike care. With a passion for excellence, we specialize in high-end detailing, ceramic coating, PPF paint protection, and vehicle customization. Our experienced team is dedicated to quality, innovation, and customer satisfaction—delivering outstanding results for every ride." />
 
 <meta name="keywords" content="About Shell Automotiv, Premium Vehicle Care, Automotive Experts, Car and Bike Detailing, Ceramic Coating, Paint Protection Film, Vehicle Customization, Auto Detailing Professionals, Graphene Coating, Interior Customization, Car Denting and Painting, Shell Automotiv Team, Car Servicing, Bike PPF, Car Care Experts" />
-
-
- <link rel="icon" href="assets/images/logo/logo.jpg">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- font awesome cnd................................................. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- aos cdn ...........................................................-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom cs........................................................... -->
-    <link href="assets/css/style.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/Ceramic.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/index.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/about.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <link href="assets/css/responsive.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-
-    <!-- Owl Carousel Theme CSS (Optional, but recommended for dots and navigation styling) -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-        
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11492577036"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11492577036');
-</script>
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MTC5V2D7');</script>
-<!-- End Google Tag Manager -->
-
-
-
-
-
-</head>
-
-<body>
-    <div class="contact-box">
-    <a href="https://wa.me/+919560595146" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-    
-</div>
-<div class="call comon_icon">
-    <a href="tel:+919560595146" target="_blank">
-        <img src="assets/img/telephone.png"></a>
-</div>
-<?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
 
     <section class="about-inner">

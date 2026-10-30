@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,32 +14,8 @@ Our skilled professionals specialize in Window Films, Denting & Painting, Interi
 Experience excellence in automotiv care at Shell Automotiv—where your vehicle's shine and protection are our priority!" />
 
 <meta name="keywords" content="Shell Automotiv, Ceramic Coating, Detailing Services, Graphene Coating, Window Film, Bike Detailing, Car Denting and Painting, Car Washing Services, Paint Protection Film, Car Ceramic Coating, Car Detailing, Motorcycle Detailing, Best Car Denting and Painting, Car Washing, Car Denting Services, PPF Car Coating, PPF Coating, Teflon Coating, Car Nano Coating" />
-
- <link rel="icon" href="assets/images/logo-web/logo.png">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- font awesome cnd................................................. -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- aos cdn ...........................................................-->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- custom cs........................................................... -->
-  <link href="assets/css/style.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-  <link href="assets/css/Ceramic.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-  <link href="assets/css/index.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-  <link href="assets/css/about.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-  <link href="assets/css/responsive.css" rel="stylesheet"> <!-- Ensure the path is correct -->
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-
-  <!-- Owl Carousel Theme CSS (Optional, but recommended for dots and navigation styling) -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<style>
+    <?php include 'header.php' ?>
+    <style>
    .hidden {
         display: none;  /* Hidden content by default */
     }
@@ -58,29 +33,6 @@ Experience excellence in automotiv care at Shell Automotiv—where your vehicle'
    
 
   </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11492577036"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11492577036');
-</script>
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MTC5V2D7');</script>
-<!-- End Google Tag Manager -->
-</head>
-
-<body>
-    <?php include 'header.php' ?>
 
   <section class="banner baner-index">
    
@@ -120,41 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </section>
   
-<!-- Modal -->
-<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="quoteModalLabel">Get A Quote</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                
-           <!-- First Form -->
-    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-    <form action="process.php" method="post" class="custom-form" id="contactForm">
-        <div class="form-title">
-            <p>FILL IN YOUR DETAILS FOR QUOTES</p>
-        </div>
-        <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-        </div>
-        <div class="form-group">
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        </div>
-        <div class="g-recaptcha" id="recaptcha1" data-sitekey="6Lfvis8rAAAAADH4uPrLG2kDN4uYX1WUmbwWLK5F"></div>
-        <div id="errorMsg" style="color: red; display: none; margin-top: 10px;"></div>
-        <div class="form-group">
-            <button type="submit">Send</button>
-        </div>
-    </form>
-            </div>
-        </div>
-    </div>
-</div>
+
   
   <section class="about-main">
     <div class="container">
@@ -589,7 +507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-md-10">
           <div class="contact-form-container">
  <!-- Second Form (Direct Submission, No Client-Side reCAPTCHA) -->
-<form action="homeprocess.php" method="post" class="contact-form" id="contactForm2">
+<form action="process.php" method="post" class="contact-form" id="contactForm2">
     <h2>Get In Touch</h2>
     <label for="name2">Name</label>
     <input type="text" id="name2" name="name" placeholder="Your Name" required class="input-field">
@@ -601,9 +519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <button type="submit" class="submit-btn" id="submitBtn2">Submit</button>
 </form>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-          </div>
+</div>
         </div>
       </div>
     </div>
@@ -635,7 +551,7 @@ while ($row = $result->fetch_assoc()) {
 $conn->close();
 
 // Define base URL dynamically
-$base_url = "https://www.shellautomotiv.com/admin-panel/";
+// $base_url is loaded from admin-panel/config.php
 ?>
     <?php foreach ($images as $img): ?>
         <div class="col-md-3" data-aos="fade-right" data-aos-duration="1500">

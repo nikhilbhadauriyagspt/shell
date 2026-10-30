@@ -1,8 +1,10 @@
-
-
-
-
 <?php
+session_start();
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: index.php");
+    exit();
+}
+
 include('config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -18,14 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mkdir($uploadDir, 0777, true);
     }
 
-    foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
-        $file_name = basename($_FILES['images']['name'][$key]);
-        $file_tmp = $_FILES['images']['tmp_name'][$key];
-        $unique_name = uniqid() . '_' . $file_name;
-        $file_path = $uploadDir . $unique_name;
+    if (!empty($_FILES['images']['tmp_name'][0])) {
+        foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
+            $file_name = basename($_FILES['images']['name'][$key]);
+            $file_tmp = $_FILES['images']['tmp_name'][$key];
+            $unique_name = uniqid() . '_' . $file_name;
+            $file_path = $uploadDir . $unique_name;
 
-        if (move_uploaded_file($file_tmp, $file_path)) {
-            $imagePaths[] = $file_path;
+            if (move_uploaded_file($file_tmp, $file_path)) {
+                $imagePaths[] = $file_path;
+            }
         }
     }
 
@@ -35,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             VALUES ('$title', '$services', '$content', '$imagePathsStr', '$date')";
 
     if (mysqli_query($conn, $sql)) {
-    echo "<script>
-        alert('Updated Post Successfully');
-        window.location.href = 'manage-update.php';
-    </script>";
-    exit;
-} else {
-    echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
-}
+        echo "<script>
+            alert('Update posted successfully!');
+            window.location.href = 'manage-update.php';
+        </script>";
+        exit;
+    } else {
+        echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+    }
 }
 ?>
